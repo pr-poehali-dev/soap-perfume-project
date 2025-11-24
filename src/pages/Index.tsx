@@ -53,7 +53,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-foreground animate-fade-in">
-              <h1 className="font-heading font-black text-5xl lg:text-6xl mb-6 leading-tight">
+              <h1 className="font-heading font-black text-4xl lg:text-5xl mb-6 leading-tight">
                 Парфюмированное мыло
               </h1>
               <p className="font-body text-xl lg:text-2xl mb-8 text-muted-foreground max-w-lg">

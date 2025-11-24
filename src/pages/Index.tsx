@@ -33,16 +33,16 @@ const Index = () => {
 
   const gallery = [
     {
-      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/e50776fa-da6c-4988-aa4e-b51d720fd297.jpg",
-      alt: "Мыло коралловое"
+      url: "https://cdn.poehali.dev/files/5a9027f6-1164-4e8b-bd45-e3bdc37f4d6a.jpg",
+      alt: "Мыло на мхе с шишками"
     },
     {
-      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/7a6c0f0c-8cd3-4e7d-809c-1562e4b7a6b9.jpg",
-      alt: "Коллекция мыла"
+      url: "https://cdn.poehali.dev/files/9b03cb42-5fab-494a-8ab2-814007d2764a.jpg",
+      alt: "Коралловое мыло в руках"
     },
     {
-      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/1a2cfa9b-9c2a-40eb-b48a-78fdd3ebf7f7.jpg",
-      alt: "Текстура мыла"
+      url: "https://cdn.poehali.dev/files/bec0c030-df63-4a5b-bf60-a97e46fe8e95.jpg",
+      alt: "Фиолетовое и голубое мыло"
     }
   ];
 

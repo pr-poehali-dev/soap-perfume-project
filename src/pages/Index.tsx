@@ -104,7 +104,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-secondary/10 via-primary/10 to-accent/10">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="font-heading font-black text-5xl lg:text-6xl text-center mb-6 text-foreground">
             Галерея

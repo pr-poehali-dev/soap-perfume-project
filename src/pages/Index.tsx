@@ -1,12 +1,182 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import Icon from "@/components/ui/icon";
 
 const Index = () => {
+  const features = [
+    {
+      icon: "Sparkles",
+      title: "Ручная работа",
+      description: "Каждый кусочек уникален и создан с любовью мастерами"
+    },
+    {
+      icon: "Flower2",
+      title: "Идеальный аромат",
+      description: "Богатая палитра ароматов для каждого человека"
+    },
+    {
+      icon: "Heart",
+      title: "Нежный уход",
+      description: "Не сушит кожу, оставляет долгий приятный аромат"
+    },
+    {
+      icon: "Factory",
+      title: "19 лет опыта",
+      description: "Собственное производство в Санкт-Петербурге"
+    },
+    {
+      icon: "Award",
+      title: "Рейтинг 4.9/5",
+      description: "Надежная репутация и все необходимые сертификаты"
+    }
+  ];
+
+  const gallery = [
+    {
+      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/e50776fa-da6c-4988-aa4e-b51d720fd297.jpg",
+      alt: "Мыло коралловое"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/7a6c0f0c-8cd3-4e7d-809c-1562e4b7a6b9.jpg",
+      alt: "Коллекция мыла"
+    },
+    {
+      url: "https://cdn.poehali.dev/projects/5623b83b-a154-4df7-8525-6eaac3c09632/files/1a2cfa9b-9c2a-40eb-b48a-78fdd3ebf7f7.jpg",
+      alt: "Текстура мыла"
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-40"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white animate-fade-in">
+              <h1 className="font-heading font-black text-7xl lg:text-8xl mb-6 leading-tight">
+                Твердое<br />перфорированное<br />мыло
+              </h1>
+              <p className="font-body text-xl lg:text-2xl mb-8 text-white/90 max-w-lg">
+                Премиальная косметика ручной работы из Санкт-Петербурга
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-white text-primary hover:bg-white/90 font-heading font-bold text-lg px-8 py-6 h-auto rounded-2xl shadow-2xl hover-scale"
+              >
+                Заказать сейчас
+              </Button>
+            </div>
+
+            <div className="relative animate-fade-in">
+              <div className="absolute -inset-4 bg-white/20 rounded-3xl blur-2xl"></div>
+              <img 
+                src={gallery[0].url}
+                alt={gallery[0].alt}
+                className="relative rounded-3xl shadow-2xl w-full object-cover aspect-square"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <Icon name="ChevronDown" className="text-white" size={40} />
+        </div>
+      </section>
+
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="font-heading font-black text-5xl lg:text-6xl text-center mb-20 text-foreground">
+            Почему выбирают нас
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {features.map((feature, index) => (
+              <Card 
+                key={index}
+                className="p-8 border-4 border-foreground/10 hover:border-primary transition-all duration-300 hover-scale bg-muted/30"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6">
+                  <Icon name={feature.icon} className="text-white" size={32} />
+                </div>
+                <h3 className="font-heading font-bold text-2xl mb-3 text-foreground">
+                  {feature.title}
+                </h3>
+                <p className="font-body text-lg text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-gradient-to-br from-secondary/10 via-primary/10 to-accent/10">
+        <div className="container mx-auto px-4">
+          <h2 className="font-heading font-black text-5xl lg:text-6xl text-center mb-6 text-foreground">
+            Галерея
+          </h2>
+          <p className="font-body text-xl text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+            Каждый кусочек — произведение искусства
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {gallery.map((image, index) => (
+              <div 
+                key={index}
+                className="group relative overflow-hidden rounded-3xl border-4 border-foreground/10 hover:border-primary transition-all duration-300 hover-scale"
+              >
+                <img 
+                  src={image.url}
+                  alt={image.alt}
+                  className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-foreground text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="font-heading font-black text-5xl lg:text-7xl mb-8">
+              Готовы к заказу?
+            </h2>
+            <p className="font-body text-xl lg:text-2xl mb-12 text-white/80">
+              Свяжитесь с нами для оформления заказа премиального мыла
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Button 
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white font-heading font-bold text-lg px-10 py-7 h-auto rounded-2xl shadow-2xl hover-scale"
+              >
+                <Icon name="Phone" size={24} className="mr-2" />
+                Позвонить
+              </Button>
+              
+              <Button 
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-4 border-white text-white hover:bg-white hover:text-foreground font-heading font-bold text-lg px-10 py-7 h-auto rounded-2xl hover-scale"
+              >
+                <Icon name="Mail" size={24} className="mr-2" />
+                Написать
+              </Button>
+            </div>
+
+            <div className="mt-16 pt-16 border-t border-white/20">
+              <p className="font-body text-lg text-white/60">
+                Производство косметики с 2005 года • Санкт-Петербург
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

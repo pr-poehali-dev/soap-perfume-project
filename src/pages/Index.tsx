@@ -48,31 +48,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSIzIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjEiLz48L3N2Zz4=')] opacity-40"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white animate-fade-in">
-              <h1 className="font-heading font-black text-7xl lg:text-8xl mb-6 leading-tight">
-                Твердое<br />перфорированное<br />мыло
+            <div className="text-foreground animate-fade-in">
+              <h1 className="font-heading font-black text-5xl lg:text-6xl mb-6 leading-tight">
+                Твердое перфорированное мыло
               </h1>
-              <p className="font-body text-xl lg:text-2xl mb-8 text-white/90 max-w-lg">
+              <p className="font-body text-xl lg:text-2xl mb-8 text-muted-foreground max-w-lg">
                 Премиальная косметика ручной работы из Санкт-Петербурга
               </p>
-              <Button 
-                size="lg" 
-                className="bg-white text-primary hover:bg-white/90 font-heading font-bold text-lg px-8 py-6 h-auto rounded-2xl shadow-2xl hover-scale"
-              >
-                Заказать сейчас
-              </Button>
             </div>
 
             <div className="relative animate-fade-in">
-              <div className="absolute -inset-4 bg-white/20 rounded-3xl blur-2xl"></div>
+              <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"></div>
               <img 
-                src={gallery[0].url}
-                alt={gallery[0].alt}
+                src="https://cdn.poehali.dev/files/c8d2551c-541c-4335-8453-4987e4f92da1.jpg"
+                alt="Твердое перфорированное мыло"
                 className="relative rounded-3xl shadow-2xl w-full object-cover aspect-square"
               />
             </div>
@@ -80,7 +73,7 @@ const Index = () => {
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <Icon name="ChevronDown" className="text-white" size={40} />
+          <Icon name="ChevronDown" className="text-foreground" size={40} />
         </div>
       </section>
 

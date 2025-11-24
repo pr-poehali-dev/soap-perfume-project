@@ -130,46 +130,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      <section className="py-24 bg-foreground text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading font-black text-5xl lg:text-7xl mb-8">
-              Готовы к заказу?
-            </h2>
-            <p className="font-body text-xl lg:text-2xl mb-12 text-white/80">
-              Свяжитесь с нами для оформления заказа премиального мыла
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white font-heading font-bold text-lg px-10 py-7 h-auto rounded-2xl shadow-2xl hover-scale"
-              >
-                <Icon name="Phone" size={24} className="mr-2" />
-                Позвонить
-              </Button>
-              
-              <Button 
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-4 border-white text-white hover:bg-white hover:text-foreground font-heading font-bold text-lg px-10 py-7 h-auto rounded-2xl hover-scale"
-              >
-                <Icon name="Mail" size={24} className="mr-2" />
-                Написать
-              </Button>
-            </div>
-
-            <div className="mt-16 pt-16 border-t border-white/20">
-              <p className="font-body text-lg text-white/60">
-                Производство косметики с 2005 года • Санкт-Петербург
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
